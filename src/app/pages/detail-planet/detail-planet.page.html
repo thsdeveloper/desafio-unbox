@@ -1,0 +1,18 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>{{planet.name}}</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+ <div class="ion-text-center">
+   <h1>Planeta {{planet.name }}</h1>
+   <p>Periodo de rotação: {{planet.rotation_period}}, Periodo de orbitação: {{planet.orbital_period}}</p>
+   <p>Diametro: {{planet.diameter}}, Clima: {{planet.climate}}, Gravidade: {{planet.gravity}}</p>
+   <p>Terreno: {{planet.terrain}}, População: {{planet.population}}</p>
+ </div>
+
+</ion-content>

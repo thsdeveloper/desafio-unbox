@@ -1,0 +1,30 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-title>Dasafio Unbox - Lista de Planetas</ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content fullscreen>
+    <ion-searchbar animated placeholder="Pesquise por nome do planeta" [(ngModel)]="queryText"
+    (ionInput)="filterPlaneta($event)"></ion-searchbar>
+    <ion-list lines="full">
+        <ion-list-header>
+            <ion-label>Esta é uma lista de planetas ou planetoides no Universo Star Wars.</ion-label>
+        </ion-list-header>
+        <ion-item *ngFor="let planet of responsePlanet | sort:'name'" button detail (click)="detailPlanet(planet)">
+            <ion-label>
+                <h2>{{planet.name}}</h2>
+                <p>Terreno: {{planet.terrain}}</p>
+                <ion-chip color="primary">
+                    <ion-label>Filmes</ion-label>
+                </ion-chip>
+                <ion-chip color="primary">
+                    <ion-label>Clima: {{planet.climate}}</ion-label>
+                </ion-chip>
+                <ion-chip color="danger">
+                    <ion-label>Diametro: {{planet.diameter}}</ion-label>
+                </ion-chip>
+            </ion-label>
+        </ion-item>
+    </ion-list>
+</ion-content>
